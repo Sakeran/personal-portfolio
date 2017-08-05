@@ -7,7 +7,6 @@ const prodConfig = {
     rules: [
       {
         test: /\.css$/,
-        exclude: /node_modules/,
         use: ExtractTextWebpackPlugin.extract({
           use: [
             {

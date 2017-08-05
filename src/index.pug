@@ -2,11 +2,12 @@ doctype html
 html(lang="en")
   head
     title Alexander Morse
+    link(href="https://fonts.googleapis.com/css?family=Acme|Carter+One|Open+Sans" rel="stylesheet")
   body
     header#header.header
-      h1 Alexander Morse
-    nav#nav.nav
-      p This is a docking, collapsible nav bar.
+      h1 #[span(class="header-first") Alexander] #[span(class="header-last") Morse]
+      h2 Web Developer
+    include pug/nav.pug
     section#about.about
       p This is a paragraph or two about me, plus a picture.
     section#portfolio.portfolio
@@ -15,5 +16,5 @@ html(lang="en")
       p This section has links to my various social media pages
     section#contact.contact
       p This section has a contact form to send me things.
-    footer#footer.footre
+    footer#footer.footer
       p This footer has more links.

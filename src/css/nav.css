@@ -1,0 +1,25 @@
+.nav {
+  background-color: #a18154;
+}
+
+.nav * {
+  margin: 0;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav a {
+  font-family: 'Acme', sans-serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav a:hover,
+.nav a:active {
+  color: #ffc600;
+  transition: color 0.25s ease-in-out;
+}

@@ -18,6 +18,17 @@ module.exports = {
         test: /\.pug$/,
         exclude: /node_modules/,
         use: 'pug-loader'
+      },
+      {
+        test: /\.(png|gif|jpe?g)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
       }
     ]
   },

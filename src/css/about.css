@@ -1,0 +1,27 @@
+.about {
+  background-color: #DD6616;
+  margin: 0;
+  padding: 0.5rem;
+  overflow: auto;
+}
+
+.about-picture {
+  width: 50%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem;
+  float: left;
+}
+
+@media (min-width: 500px) {
+  .about {
+    display: flex;
+    align-items: center;
+  }
+
+  .about-picture {
+    margin: auto;
+  }
+}

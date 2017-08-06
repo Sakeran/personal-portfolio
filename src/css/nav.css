@@ -52,6 +52,7 @@
   border: none;
   color: inherit;
   font-size: 2rem;
+  opacity: 0.8;
 }
 .toggle-menu:hover,
 .toggle-menu:active {

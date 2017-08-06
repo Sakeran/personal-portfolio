@@ -1,6 +1,7 @@
 body {
   background-color: #b35142;
   background-image: url('images/canvas.png');
+  font-family: 'Open Sans', sans-serif;
   color: #2B0206;
   /* For nav bar testing */
   min-height: 1000px;

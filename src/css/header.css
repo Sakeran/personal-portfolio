@@ -4,7 +4,6 @@
   background-image: url('../images/cardboard-light.png');
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   position: relative;
-  z-index: 100;
 }
 
 .header * {
@@ -30,4 +29,15 @@
 
 .header-last {
   color: #ff7800;
+}
+
+/* Nudge the header text to the left on very small screens
+to prevent the toggle button from overlapping. */
+@media (max-width: 400px) {
+    .header {
+      text-align: left;
+      padding-left: 10px;
+      padding-right: 30%;
+    }
+
 }

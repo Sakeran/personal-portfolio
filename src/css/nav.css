@@ -1,5 +1,20 @@
 .nav {
   background-color: #a18154;
+  background-image: url('../images/cardboard-smooth.png');
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  height: 100%;
+  width: 0;
+  overflow-x: hidden;
+  transition: width 0.3s ease-in;
+}
+
+.nav.nav-open {
+  width: 40%;
+  max-width: 350px;
 }
 
 .nav * {
@@ -9,6 +24,11 @@
 .nav ul {
   list-style: none;
   padding: 0;
+  margin: 0 auto;
+}
+
+.nav li {
+  margin-bottom: 1em;
 }
 
 .nav a {
@@ -22,4 +42,33 @@
 .nav a:active {
   color: #ffc600;
   transition: color 0.25s ease-in-out;
+}
+
+.toggle-menu {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 2rem;
+}
+.toggle-menu:hover,
+.toggle-menu:active {
+  color: #ffc600;
+  transition: color 0.25s ease-in-out;
+}
+
+/* Fallback class for browsers without JS */
+
+.nav.nav-fallback {
+  position:inherit;
+  height: auto;
+  width: auto;
+  overflow-x: auto;
+  z-index: -1;
+}
+
+.toggle-menu.toggle-menu-fallback {
+  display: none;
 }

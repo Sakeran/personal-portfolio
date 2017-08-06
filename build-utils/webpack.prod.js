@@ -15,7 +15,12 @@ const prodConfig = {
                 minimize: true
               }
             },
-            'postcss-loader'
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: [require('autoprefixer')]
+              }
+            }
           ],
           fallback: 'style-loader'
         })

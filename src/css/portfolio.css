@@ -29,6 +29,7 @@
   height: 100%;
   top: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #0C0001;
@@ -38,13 +39,18 @@
   opacity: 0;
 }
 
+.portfolio-overlay-link {
+  font-size: 1rem;
+}
+
 .portfolio-clickable .portfolio-overlay {
   cursor: pointer;
 }
 
-.portfolio-clickable .portfolio-overlay:hover {
+.portfolio-clickable .portfolio-overlay:hover,
+.portfolio-clickable .portfolio-overlay:active {
   opacity: 0.7;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease;
 }
 
 .portfolio-link {
@@ -57,13 +63,66 @@
   color: inherit;
   font-family: 'Acme', sans-serif;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
 .portfolio-text {
   width: 90%;
   margin: 0 auto;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-weight: 600;
+}
+
+/*Portfolio Modal Classes*/
+
+.portfolio-modal {
+  display: none;
+  position: fixed;
+  left: 2%;
+  top: 2%;
+  width: 96%;
+  height: 96%;
+  overflow-y: auto;
+  background-image: url('../images/cardboard-smooth.png');
+  z-index: -1;
+  box-shadow: 0.1rem 0.3rem 0.3rem rgba(0, 0, 0, 0.7);
+  border-radius: 0.2rem;
+}
+
+.portfolio-modal.portfolio-modal-active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 15;
+}
+
+.portfolio-modal-content {
+  width: 90%;
+  margin-top: 0.25rem;
+}
+
+.portfolio-modal-content img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.2rem;
+}
+
+.portfolio-modal-content button {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 2rem;
+  opacity: 0.8;
+  z-index: 16;
+}
+
+.portfolio-modal-content button:hover,
+.portfolio-modal-content button:active {
+  color: #ffc600;
+  transition: color 0.25s ease-in-out;
 }

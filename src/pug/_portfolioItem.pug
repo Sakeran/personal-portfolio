@@ -3,7 +3,8 @@ mixin portfolioItem(title, img, href)
     .portfolio-thumb
       img(src=img, alt=title)
       .portfolio-overlay
-        | View Project
+        p= title
+        p.portfolio-overlay-link View Project
     .portfolio-info
       .portfolio-title
         h4= title

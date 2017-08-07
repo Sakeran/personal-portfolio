@@ -6,3 +6,9 @@ body {
   /* For nav bar testing */
   min-height: 1000px;
 }
+
+h1, h2, h3 {
+  font-family: 'Acme', sans-serif;
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,58 @@
+.contact {
+  background-image: url('../images/cardboard-smooth.png');
+  padding: 1rem 0;
+}
+
+.contact form {
+  margin-bottom: 1rem;
+}
+
+.contact label {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-family: Acme, sans-serif;
+  margin-bottom: 0.2rem;
+  color: #4c0d00;
+}
+
+.contact input,
+.contact textarea {
+  width: 90%;
+  padding: 0.5rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border: none;
+  background-color: #d6c4a8;
+  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.contact textarea {
+  margin-bottom: 0.3rem;
+  resize: none;
+}
+
+.contact input[type="submit"] {
+  display: block;
+  width: 90%;
+  margin: 1rem auto;
+  margin-bottom: 1rem;
+  padding: 5px 0;
+  color: black;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #DD6616;
+  font-size: 1.2rem;
+  font-family: Acme, sans-serif;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  transition: color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+
+.contact input[type="submit"]:hover,
+.contact input[type="submit"]:active {
+  transform: scale(1.05);
+  color: #ffc600;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}

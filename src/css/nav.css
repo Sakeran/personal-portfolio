@@ -16,6 +16,7 @@
 .nav.nav-open {
   width: 40%;
   max-width: 350px;
+  box-shadow: 0.2rem 0 0.3rem rgba(0, 0, 0, 0.6);
 }
 
 .nav * {

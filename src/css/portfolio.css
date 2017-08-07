@@ -1,0 +1,69 @@
+.portfolio {
+  /*border: 2px double green;*/
+}
+
+.portfolio-item {
+  margin: 0.6rem auto;
+  width: 90%;
+  max-width: 400px;
+  background-image: url('../images/cardboard-light.png');
+  padding: 0.3rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+.portfolio-thumb {
+  position: relative;
+}
+
+.portfolio-thumb img{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0C0001;
+  color: #ffc600;
+  font-size: 1.2rem;
+  font-family: 'Acme', sans-serif;
+  opacity: 0;
+}
+
+.portfolio-clickable .portfolio-overlay {
+  cursor: pointer;
+}
+
+.portfolio-clickable .portfolio-overlay:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-link {
+  text-align: center;
+}
+
+.portfolio-title h4 {
+  margin: 0;
+  text-align: center;
+  color: inherit;
+  font-family: 'Acme', sans-serif;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.portfolio-text {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+}

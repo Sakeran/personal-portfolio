@@ -1,0 +1,30 @@
+.links {
+  background-color: #DD6616;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.media-link {
+  font-family: 'Acme', sans-serif;
+  display: block;
+  color: inherit;
+  display: flex;
+  align-items:  center;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.media-link:hover,
+.media-link:active {
+  color: #ffc600;
+  transition: color 0.25s ease-in-out;
+}
+
+
+.media-logo {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}

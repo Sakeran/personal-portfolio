@@ -7,6 +7,7 @@ import './css/about.css';
 import './css/portfolio.css';
 import './css/links.css';
 import './css/contact.css';
+import './css/footer.css';
 
 
 import initNav from './js/initNav';

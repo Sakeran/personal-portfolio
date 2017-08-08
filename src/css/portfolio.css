@@ -96,6 +96,9 @@ is active. */
   transition: color 0.3s ease;
 }
 
-.portfolio-clickable .portfolio-overlay {
-
+/* Media Queries */
+@media (min-width: 960px) {
+  .portfolio {
+    grid-area: portfolio;
+  }
 }

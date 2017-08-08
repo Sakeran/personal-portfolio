@@ -25,3 +25,9 @@
     margin: auto;
   }
 }
+
+@media (min-width: 960px) {
+  .about {
+    grid-area: about;
+  }
+}

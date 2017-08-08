@@ -56,3 +56,10 @@
   color: #ffc600;
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
+
+@media (min-width: 960px) {
+  .contact {
+    grid-area: contact;
+    box-shadow: -0.1rem 0 0.2rem rgba(0,0,0,0.3);
+  }
+}

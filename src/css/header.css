@@ -4,6 +4,7 @@
   background-image: url('../images/cardboard-light.png');
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   position: relative;
+  z-index: 1;
 }
 
 .header * {
@@ -40,4 +41,10 @@ to prevent the toggle button from overlapping. */
       padding-right: 30%;
     }
 
+}
+
+@media (min-width: 960px) {
+  .header {
+    grid-area: header;
+  }
 }

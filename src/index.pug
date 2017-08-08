@@ -5,13 +5,14 @@ html(lang="en")
     title Alexander Morse
     link(href="https://fonts.googleapis.com/css?family=Acme|Carter+One|Open+Sans" rel="stylesheet")
   body
-    header#header.header
-      h1 #[span(class="header-first") Alexander] #[span(class="header-last") Morse]
-      h2 Web Developer
-    include pug/nav.pug
-    include pug/about.pug
-    include pug/portfolio.pug
-    include pug/links.pug
-    include pug/contact.pug
-    include pug/footer.pug
-    script(src="https://use.fontawesome.com/aa052ca1ce.js")
+    .layout
+      header#header.header
+        h1 #[span(class="header-first") Alexander] #[span(class="header-last") Morse]
+        h2 Web Developer
+      include pug/nav.pug
+      include pug/about.pug
+      include pug/portfolio.pug
+      include pug/links.pug
+      include pug/contact.pug
+      include pug/footer.pug
+      script(src="https://use.fontawesome.com/aa052ca1ce.js")

@@ -12,3 +12,16 @@ h1, h2, h3 {
   width: 100%;
   text-align: center;
 }
+
+@media (min-width: 960px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: "header header"
+                         "nav nav"
+                         "about about"
+                         "portfolio portfolio"
+                         "links contact"
+                         "footer footer";
+  }
+}

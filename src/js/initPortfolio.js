@@ -1,5 +1,3 @@
-const Masonry = require('masonry-layout');
-
 // Moves the portfolio-info div to portfolio-overlay. This should allow
 // the post's description and link to be viewable even without JS enabled.
 function moveInfoToOverlay(item) {
@@ -64,14 +62,6 @@ function initPortfolio() {
     moveInfoToOverlay(item);
     // Add touch events to handle overlay behavior on touchscreens.
     addTouchEvents(item);
-  });
-
-  // Initialize Masonry grid.
-  const grid = document.querySelector('.portfolio-items');
-  new Masonry(grid, {
-    itemSelector: '.portfolio-item',
-    fitWidth: true,
-    gutter: 20
   });
 }
 

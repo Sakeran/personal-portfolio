@@ -1,10 +1,11 @@
 include _portfolioItem.pug
 section#portfolio.portfolio
-  +portfolioItem("Test Entry", "http://via.placeholder.com/200x200")
-    p These are a few sentences describing this entry. There's nothing to describe, so this will have to do.
-  +portfolioItem("Test Entry", "http://via.placeholder.com/200x200")
-    p Desc Goes Here
-  +portfolioItem("Test Entry", "http://via.placeholder.com/200x200")
-    p Desc Goes Here
-  +portfolioItem("Test Entry", "http://via.placeholder.com/200x200")
-    p Desc Goes Here
+  .portfolio-items
+    +portfolioItem("Test Entry", "http://via.placeholder.com/200x200")
+      p These are a few sentences describing this entry. There's nothing to describe, so this will have to do.
+    +portfolioItem("Test Entry", "http://via.placeholder.com/200x200")
+      p Desc Goes Here
+    +portfolioItem("Test Entry", "http://via.placeholder.com/200x200")
+      p Desc Goes Here
+    +portfolioItem("Test Entry", "http://via.placeholder.com/200x200")
+      p Desc Goes Here

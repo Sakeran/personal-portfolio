@@ -2,9 +2,14 @@
   /*border: 2px double green;*/
 }
 
+.portfolio-items {
+  margin: 0 auto;
+}
+
 .portfolio-item {
   margin: 0.6rem auto;
-  width: 90%;
+  width: 30%;
+  min-width: 240px;
   max-width: 400px;
   background-image: url('../images/cardboard-light.png');
   padding: 0.3rem;

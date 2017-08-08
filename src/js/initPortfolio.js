@@ -4,6 +4,8 @@ const {
   appendModalInfo,
 } = require('./modalFunctions');
 
+const Masonry = require('masonry-layout');
+
 function initializeItem(item, index) {
   // Give each item an index so we can find the details later.
   item.dataset.portfolioIndex = index;
@@ -45,6 +47,14 @@ function initPortfolio() {
   });
 
   addModal();
+
+  // Initialize Masonry grid.
+  const grid = document.querySelector('.portfolio-items');
+  new Masonry(grid, {
+    itemSelector: '.portfolio-item',
+    fitWidth: true,
+    gutter: 20
+  });
 }
 
 module.exports = initPortfolio;

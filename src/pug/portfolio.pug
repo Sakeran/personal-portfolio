@@ -1,12 +1,25 @@
 include _portfolioItem.pug
 section#portfolio.portfolio
   .portfolio-items
-    +portfolioItem("Test Entry With A Slightly Longer Title", "http://via.placeholder.com/200x200")
-      p These are a few sentences describing this entry. There's nothing to describe, so this will have to do.
-      p These are a few sentences describing this entry. There's nothing to describe, so this will have to do.
-    +portfolioItem("Test Entry", "http://via.placeholder.com/200x200")
-      p Desc Goes Here
-    +portfolioItem("Test Entry", "http://via.placeholder.com/200x200")
-      p Desc Goes Here
-    +portfolioItem("Test Entry", "http://via.placeholder.com/200x200")
-      p Desc Goes Here
+    +portfolioItem("Picture App", require('./images/thumbnails/picture-app-thumb.png'), href="https://github.com/Sakeran/picture-app")
+      p A social media application in the Style of Pintrest, users can share and comment on links to images and YouTube videos. Created with React.
+    +portfolioItem("Nightlife Coordination App", require('./images/thumbnails/nightlife_app_thumb.png'), href="https://github.com/Sakeran/nightlife-app")
+      p A Full-Stack Single Page Application written with React, allowing users to look up nearby bars and make plans to visit them. Integrates the Yelp API via an Express/Node.js backend.
+    +portfolioItem("Book Trading App", require('./images/thumbnails/book_trading_thumb.png'), href="https://github.com/Sakeran/book-exchange")
+      p A Full-Stack book-trading and coordination application with a RESTful MVC architecture. Written in Javascript with Express/Node.js, and styled with the Bulma CSS framework.
+    +portfolioItem("Stock Charter App", require('./images/thumbnails/stock_charter_thumb.png'), href="https://github.com/Sakeran/stock-charter")
+      p A Full-Stack Express/Node.js/WebSockets Single Page Application written with React, allowing users to lookup stock prices in real-time.
+    +portfolioItem("Voting App", require('./images/thumbnails/voting_app_thumb.png'), href="https://github.com/Sakeran/voting-app")
+      p A Full-Stack Express/Node.js Single Page Application written with React, allowing a user to create and vote on custom polls.
+    +portfolioItem("Simon Game", require('./images/thumbnails/simon_thumb.png'), href="https://github.com/Sakeran/simon-game")
+      p A Simon-Says style memory game in which the player is required to memorize a series of button presses. Created as a project for Free Code Camp.
+    +portfolioItem("Tic Tac Toe", require('./images/thumbnails/tic_tac_toe_thumb.png'), href="https://codepen.io/AMorse/full/JELRVx/")
+      p A Tic-Tac-Toe game in which the player competes against an AI opponent. Written in JavaScript, using the HTML5 Canvas. Created as a project for Free Code Camp.
+    +portfolioItem("Pomodoro Clock", require('./images/thumbnails/pomodoro_thumb.png'), href="https://codepen.io/AMorse/full/EZVRGR/")
+      p A Pomodoro Timer application written in JavaScript. Created as a project for Free Code Camp.
+    +portfolioItem("Wikipedia Viewer", require('./images/thumbnails/wiki_viewer_thumb.png'), href="https://github.com/Sakeran/wikipedia-viewer")
+      p A JavaScript application that leverages the Wikipedia API to search through Wikipedia articles. Created as a project for Free Code Camp.
+    +portfolioItem("Random Quote Machine", require('./images/thumbnails/portfolio_rqm_thumb.png'), href="https://codepen.io/AMorse/full/mOezRB/")
+      p A JavaScript application for generating random quotes, with Twitter support. Created as a project for Free Code Camp.
+    +portfolioItem("Go Seigan Tribute", require('./images/thumbnails/portfolio_tribute_thumb.png'), href="https://codepen.io/AMorse/full/NRZrWz")
+      p A tribute page dedicated to Go Seigen, one of the most influential Go players of the 20th century. Created as a project for Free Code Camp.

@@ -2,6 +2,11 @@
   margin: 0 auto;
 }
 
+.portfolio-item-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .portfolio-item {
   margin: 0.6rem auto;
   width: 30%;
@@ -77,7 +82,7 @@ is active. */
 .portfolio-clickable .portfolio-overlay:hover,
 .portfolio-clickable .portfolio-overlay:active,
 .portfolio-clickable.show-overlay .portfolio-overlay {
-  opacity: 0.8;
+  opacity: 0.9;
   transition: opacity 0.5s ease;
 }
 
@@ -103,8 +108,8 @@ is active. */
   }
 
   .portfolio-item {
-    width: auto;
-    height: auto;
+    /*width: auto;*/
+    /*height: auto;*/
     margin: none;
     min-width: none;
     max-width: none;

@@ -1,12 +1,13 @@
 mixin portfolioItem(title, img, href)
-  .portfolio-item
-    .portfolio-thumb
-      img(src=img, alt=title)
-      .portfolio-overlay
-    .portfolio-info
-      .portfolio-title
-        h4= title
-      .portfolio-text
-        block
-      .portfolio-link
-        a(href= href || "#") Visit This Page
+  .portfolio-item-wrapper
+    .portfolio-item
+      .portfolio-thumb
+        img(src=img, alt=title)
+        .portfolio-overlay
+      .portfolio-info
+        .portfolio-title
+          h4= title
+        .portfolio-text
+          block
+        .portfolio-link
+          a(href= href || "#") Visit This Project

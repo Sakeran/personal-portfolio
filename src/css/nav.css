@@ -82,7 +82,6 @@
     grid-area: nav;
     display: block;
     width: 100%;
-    max-width: 1400px;
     height: auto;
     position: relative;
     transition: none;
@@ -94,7 +93,7 @@
   /* Disable nav-open */
   .nav.nav-open {
     width: 100%;
-    max-width: 1400px;
+    max-width: inherit;
     box-shadow: none;
   }
 
@@ -113,5 +112,17 @@
 
   .toggle-menu {
     display: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr minmax(80%, 1400px) 1fr;
+    grid-template-areas: '. links .';
+  }
+
+  .nav ul {
+    grid-area: links;
   }
 }

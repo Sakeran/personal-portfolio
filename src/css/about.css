@@ -16,13 +16,25 @@
 }
 
 @media (min-width: 500px) {
-  .about {
+  .about-content {
     display: flex;
     align-items: center;
   }
 
   .about-picture {
     margin: auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  .about {
+    display: grid;
+    grid-template-columns: 1fr minmax(80%, 1400px) 1fr;
+    grid-template-areas: '. about-content .';
+  }
+
+  .about-content {
+    grid-area: about-content;
   }
 }
 

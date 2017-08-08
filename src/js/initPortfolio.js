@@ -1,52 +1,70 @@
-const {
-  addModal,
-  showModal,
-  appendModalInfo,
-} = require('./modalFunctions');
-
 const Masonry = require('masonry-layout');
 
-function initializeItem(item, index) {
-  // Give each item an index so we can find the details later.
-  item.dataset.portfolioIndex = index;
-  // Set the item to use the "clickable" class
-  item.classList.add('portfolio-clickable');
-}
-
-// Removes the info section from the item and pushes it onto the array
-// for later retrieval.
-function storeInfoNode(array, item) {
+// Moves the portfolio-info div to portfolio-overlay. This should allow
+// the post's description and link to be viewable even without JS enabled.
+function moveInfoToOverlay(item) {
   const infoNode = item.querySelector('.portfolio-info');
   if (!infoNode) { return; }
+  const overlay = item.querySelector('.portfolio-overlay');
+  if(!overlay) { return; }
 
-  // Pass in a clone of the item's image tag.
-  const imgDiv = document.createElement('div');
-  imgDiv.classList.add('.portfolio-img');
-  imgDiv.appendChild(item.querySelector('img').cloneNode());
+  //Pass the node's children into the portfolio's overlay node.
+  Array.from(infoNode.children).forEach(child => {
+    overlay.appendChild(child);
+  });
+}
 
-  const text = infoNode.querySelector('.portfolio-text');
-  infoNode.insertBefore(imgDiv, text);
+// Add touch events to portfolio-item. Since hover won't work on touchscreens,
+// a tap should toggle the 'show-overlay' class.
+function addTouchEvents(item) {
+  let isToggled = false;
 
-  // Push the node onto the array.
-  array.push(infoNode.parentNode.removeChild(infoNode));
+  // Body Listener - this gets added to the document when the overlay is
+  // toggled on, and will toggle the overlay off if a touch is detected
+  // elsewhere on the page.
+  const bodyListener = (e) => {
+    if (!item.contains(e.target)) {
+      item.classList.remove('show-overlay');
+      isToggled = false;
+      document.body.removeEventListener('touchstart', bodyListener);
+    }
+  };
+
+  // Main event listener.
+  item.addEventListener('touchstart', (e) => {
+
+    // If the overlay is toggled off, turn it on regardless of anything.
+    if (!isToggled) {
+      item.classList.add('show-overlay');
+      isToggled = true;
+      // Add an event listener to the body to turn the overlay off if
+      // a touch event happens elsewhere.
+      document.body.addEventListener('touchstart', bodyListener);
+      return;
+    }
+
+    // Otherwise, toggle the overlay off if the immediate target is not a
+    // link.
+    if (e.target.nodeName !== 'A') {
+      // We can accomplish this just by invoking the bodyListener.
+      bodyListener(e);
+    }
+
+  });
 }
 
 function initPortfolio() {
-  // Remove the "profile-info" section from all portfolio items and store
-  // them in an array for later display.
   const items = Array.from(document.querySelectorAll('.portfolio-item'));
-  const itemInfoNodes = [];
-  items.forEach((item, i) => {
-    initializeItem(item, i);
-    storeInfoNode(itemInfoNodes, item);
-    // Add a listener to show the modal upon a click.
-    item.addEventListener('click', () => {
-      appendModalInfo(itemInfoNodes[i]);
-      showModal();
-    });
+  items.forEach((item) => {
+    // Set the item to use the "clickable" class - this makes the overlay CSS
+    // work.
+    item.classList.add('portfolio-clickable');
+    // Move the profile-info section into portfolio-overlay, since JS is
+    // enabled.
+    moveInfoToOverlay(item);
+    // Add touch events to handle overlay behavior on touchscreens.
+    addTouchEvents(item);
   });
-
-  addModal();
 
   // Initialize Masonry grid.
   const grid = document.querySelector('.portfolio-items');

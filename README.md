@@ -13,8 +13,8 @@ npm start
 
 ## Building
 
-'''
+```
 npm run build:prod
-'''
+```
 
 This will create a folder named 'build' in the root directory.

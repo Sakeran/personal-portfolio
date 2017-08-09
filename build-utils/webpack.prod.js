@@ -1,4 +1,5 @@
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 const webpack = require('webpack');
 
 const prodConfig = {
@@ -29,7 +30,8 @@ const prodConfig = {
   },
   plugins: [
     new ExtractTextWebpackPlugin('styles.css'),
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin(),
+    new ManifestPlugin(),
   ],
 };
 

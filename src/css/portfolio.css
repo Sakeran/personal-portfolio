@@ -52,6 +52,7 @@
 .portfolio-text {
   width: 90%;
   margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
 }

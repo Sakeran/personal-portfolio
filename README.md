@@ -11,8 +11,6 @@ npm install
 npm start
 ```
 
-This will start the Webpack Dev Server on Port 3000.
-
 ## Building
 
 '''

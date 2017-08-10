@@ -32,6 +32,7 @@
 
 .portfolio-link {
   text-align: center;
+  font-size: 16px;
 }
 
 .portfolio-title {
@@ -42,19 +43,19 @@
   color: inherit;
   font-family: 'Acme', sans-serif;
   text-decoration: none;
-  font-size: 1.3rem;
   font-weight: bold;
 }
 
 .portfolio-title h4 {
   margin: 0;
+  font-size: 24px;
 }
 
 .portfolio-text {
   width: 90%;
   margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.8rem;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -69,7 +70,7 @@
   align-items: center;
   background-color: #0C0001;
   color: white;
-  font-size: 1.2rem;
+  font-size: 14px;
   font-family: 'Acme', sans-serif;
   opacity: 0;
 }
